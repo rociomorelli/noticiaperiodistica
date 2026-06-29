@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plapla - Wikipedia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #202122;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background-color: white;
+            border-bottom: 1px solid #a2a9b1;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+            color: #3366cc;
+        }
+        
+        .search-box {
+            flex: 1;
+            display: flex;
+            gap: 5px;
+        }
+        
+        .search-box input {
+            padding: 8px 12px;
+            border: 1px solid #a2a9b1;
+            border-radius: 2px;
+            flex: 1;
+            max-width: 300px;
+            font-size: 14px;
+        }
+        
+        .search-box button {
+            padding: 8px 16px;
+            background-color: #3366cc;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 20px;
+            padding: 0 20px;
+        }
+        
+        .sidebar {
+            background-color: #f8f9fa;
+        }
+        
+        .sidebar-box {
+            background-color: white;
+            border: 1px solid #a2a9b1;
+            border-radius: 2px;
+            margin-bottom: 20px;
+            padding: 12px;
+        }
+        
+        .sidebar-box h3 {
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        
+        .sidebar-box ul {
+            list-style: none;
+            font-size: 13px;
+        }
+        
+        .sidebar-box ul li {
+            margin: 4px 0;
+        }
+        
+        .sidebar-box ul li a {
+            color: #3366cc;
+            text-decoration: none;
+        }
+        
+        .sidebar-box ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        .main-content {
+            background-color: white;
+            padding: 30px;
+            border: 1px solid #a2a9b1;
+            border-radius: 2px;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            border-bottom: 1px solid #a2a9b1;
+            padding-bottom: 10px;
+        }
+        
+        .toc {
+            background-color: #f8f9fa;
+            border: 1px solid #a2a9b1;
+            padding: 12px;
+            margin: 20px 0;
+            border-radius: 2px;
+        }
+        
+        .toc-title {
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+        
+        .toc ol {
+            margin-left: 20px;
+            font-size: 13px;
+        }
+        
+        .toc ol li {
+            margin: 4px 0;
+        }
+        
+        .toc ol li a {
+            color: #3366cc;
+            text-decoration: none;
+        }
+        
+        .toc ol li a:hover {
+            text-decoration: underline;
+        }
+        
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        
+        h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">Wikipedia</div>
+            <div class="search-box">
+                <input type="text" placeholder="Buscar en Wikipedia...">
+                <button>Buscar</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-box">
+                <h3>Herramientas</h3>
+                <ul>
+                    <li><a href="#inicio">Página principal</a></li>
+                    <li><a href="#cambios">Cambios recientes</a></li>
+                    <li><a href="#articulos">Artículos aleatorios</a></li>
+                    <li><a href="#ayuda">Ayuda</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-box">
+                <h3>En otros idiomas</h3>
+                <ul>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Português</a></li>
+                    <li><a href="#">Deutsch</a></li>
+                    <li><a href="#">Français</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <h1 class="page-title">Plapla</h1>
+            
+            <p><strong>Plapla</strong> es una letra de aparición excepcional que no integra el abecedario oficial. Se distingue de las restantes letras por manifestar movimiento autónomo una vez escrita. Se la define conceptualmente como una letra viviente y autónoma del abecedario que nace de manera espontánea debido a una anomalía en el trazo escolar de un alumno.</p>
+            
+            <p>Ante la manifestación de que la maestra nunca había mencionado la existencia de una letra con ese nombre ni la posibilidad de que caminara por el cuaderno, la Plapla confirmó que efectivamente se trataba de una nueva letra y que su existencia queda demostrada por el hecho mismo de haber sido escrita.</p>
+            
+            <div class="toc">
+                <div class="toc-title">Contenidos</div>
+                <ol>
+                    <li><a href="#caracteristicas">Características y morfología</a></li>
+                    <li><a href="#primer-registro">Primer registro</a></li>
+                    <li><a href="#identificacion">Identificación</a></li>
+                    <li><a href="#comportamiento">Comportamiento</a></li>
+                    <li><a href="#confirmacion">Confirmación del fenómeno</a></li>
+                    <li><a href="#situacion">Situación actual</a></li>
+                </ol>
+            </div>
+            
+            <h2 id="caracteristicas">Características y morfología</h2>
+            
+            <p><strong>Aspecto físico:</strong> Es descrita morfológicamente como una letra "gordísima" y de trazo irregular, cuya forma no se corresponde con ninguna de las grafías estandarizadas del alfabeto convencional.</p>
+            
+            <p><strong>Dinámica y movimiento:</strong> Carece de la inmovilidad propia de los signos tipográficos. Tiene la capacidad de desplazarse de forma independiente sobre el soporte de papel, ejecutando acciones físicas complejas como caminar, bailar, patinar y saltar entre los renglones.</p>
+            
+            <p><strong>Expresión acústica:</strong> Posee capacidades sonoras propias, siendo capaz de cantar y emitir sonidos de forma independiente de la lectura en voz alta de un humano.</p>
+            
+            <p><strong>Rasgos psicológicos:</strong> Manifiesta estados emocionales alterables; el relato destaca su timidez y asombro al verse observada en un entorno extraño.</p>
+            
+            <h2 id="primer-registro">Primer registro</h2>
+            
+            <p>El primer caso documentado corresponde a Felipito Tacatún, quien realizaba sus deberes escolares escribiendo en un cuaderno letras de diferentes características gráficas, entre ellas enruladas emes, orejudas eles y elegantísimas zetas. Durante esa actividad detectó una irregularidad sobre el papel. Como el observador presentaba miopía, utilizó sucesivamente tres pares de anteojos para examinar el fenómeno. La observación permitió verificar que una de las letras producidas abandonaba su posición habitual, se despatarraba y caminaba con desenvoltura por el cuaderno, desplazándose por la página como una araña de tinta.</p>
+            
+            <h2 id="identificacion">Identificación</h2>
+            
+            <p>El intento inicial de interrumpir la observación mediante el cierre del cuaderno produjo una respuesta audible (<em>¡Ay!</em>), atribuida a la propia letra. Reanudada la observación, el alumno interrogó al fenómeno acerca de su identidad, obteniendo como respuesta la autodenominación <strong>"Plapla"</strong>.</p>
+            
+            <h2 id="comportamiento">Comportamiento</h2>
+            
+            <p>Consultada acerca del procedimiento que debía seguirse frente a su aparición, la Plapla indicó que únicamente correspondía observarla. Durante la observación continuó desplazándose por el cuaderno mientras cantaba un vals con una voz pequeña y de tinta.</p>
+            
+            <p>Las conductas registradas para este tipo de letra incluyen caminar, patinar, bailar, cantar y jugar a la rayuela utilizando los renglones como soporte.</p>
+            
+            <h2 id="confirmacion">Confirmación del fenómeno</h2>
+            
+            <p>El caso fue comunicado al día siguiente a la maestra mediante la presentación del cuaderno. La docente interpretó inicialmente que el alumno había perdido la razón; sin embargo, la apertura del cuaderno permitió corroborar directamente la existencia de la Plapla, observándosela mientras bailaba, patinaba por la página y jugaba a la rayuela con los renglones.</p>
+            
+            <p>La comprobación del fenómeno produjo un importante revuelo en el establecimiento educativo. Como consecuencia, durante esa jornada no se desarrollaron actividades de estudio. La totalidad de las personas presentes, desde el portero hasta los alumnos de primer grado, contempló la Plapla respetando un riguroso turno.</p>
+            
+            <h2 id="situacion">Situación actual</h2>
+            
+            <p>El desorden ocasionado por la aparición de la Plapla y la interrupción de las actividades escolares determinaron su exclusión del abecedario. En la actualidad, cuando un niño escribe accidentalmente una Plapla cantante y patinadora, la maestra la guarda en una cajita y procura impedir que el hecho sea conocido.</p>
+            
+            <p>Por esta razón, las Plaplas no forman parte del sistema oficial de escritura. Las demás letras permanecen inmóviles unas junto a otras, mientras que las Plaplas constituyen la única excepción conocida. Pudiendo desplazarse sobre el papel, bailar, patinar, cantar y participar de actividades lúdicas. Debido a estas características, su presencia constituye un fenómeno extraordinario dentro del sistema de escritura.</p>
+        </div>
+    </div>
+</body>
+</html>
